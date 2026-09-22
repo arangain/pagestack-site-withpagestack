@@ -1,0 +1,108 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Work | Pagestack</title><meta name="description" content="What a managed Pagestack site looks like after a few months.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+:root{
+ --ink:#0B0B12; --body:#50505F; --mute:#83838F; --line:#EAE8F0;
+ --bg:#fff; --soft:#FAFAFB;
+ color-scheme:light;
+ --p1:#7C3AED; --p2:#C026D3; --p3:#EC4899; --p4:#F97316; --p5:#FBBF24;
+}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);
+ font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+ font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:26px 0}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800;font-size:21px;letter-spacing:-.02em}
+.mark{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+ background:linear-gradient(135deg,var(--p1),var(--p3))}
+.mark i{width:12px;height:12px;border-radius:4px;background:#fff;display:block}
+nav .links{display:flex;gap:30px;font-size:15px;font-weight:500;color:var(--body)}
+nav .links a{text-decoration:none}
+nav .links a:hover{color:var(--ink)}
+@media(max-width:760px){nav .links{display:none}}
+
+.hero{position:relative;border-radius:28px;overflow:hidden;padding:84px 28px 92px;text-align:center;margin-bottom:24px}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;
+ background:
+  radial-gradient(60% 70% at 78% 24%, #F9A8D4 0%, transparent 62%),
+  radial-gradient(52% 62% at 16% 88%, #DCEDA0 0%, transparent 60%),
+  radial-gradient(58% 64% at 44% 52%, #FBD5BD 0%, transparent 64%),
+  radial-gradient(70% 78% at 10% 10%, #E4DBF8 0%, transparent 66%),
+  #FCFBFE;
+ filter:blur(2px)}
+.hero>*{position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;
+ padding:8px 17px;font-size:14.5px;font-weight:500;color:#111;box-shadow:0 1px 3px rgba(20,10,40,.09);margin-bottom:26px}
+.badge b{display:grid;place-items:center;width:17px;height:17px;border-radius:50%;background:#22C55E;color:#fff;font-size:10px}
+h1{font-size:clamp(38px,6.6vw,70px);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:0 0 22px;color:#0B0B12}
+.grad{background:linear-gradient(95deg,var(--p1),var(--p2) 26%,var(--p3) 52%,var(--p4) 78%,var(--p5));
+ -webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,2.1vw,20px);color:#3C3C49;max-width:36ch;margin:0 auto 34px}
+.ctas{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15.5px}
+.btn.p{background:linear-gradient(95deg,var(--p1),var(--p3));color:#fff;box-shadow:0 6px 20px rgba(160,40,190,.26)}
+.btn.s{background:#fff;color:#111;border:1px solid #E6E2EE}
+
+section{padding:76px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--p2);margin:0 0 13px}
+h2{font-size:clamp(27px,3.6vw,40px);line-height:1.14;letter-spacing:-.025em;font-weight:800;margin:0 0 14px;text-wrap:balance}
+.sub{color:var(--body);max-width:56ch;margin:0 0 42px;font-size:17.5px}
+h3{font-size:19px;font-weight:700;letter-spacing:-.015em;margin:0 0 8px}
+p{margin:0 0 14px;color:var(--body)}
+
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(252px,1fr))}
+.grid5{display:grid;gap:18px;grid-template-columns:repeat(6,1fr)}
+.grid5>*{grid-column:span 2}
+.grid5>*:nth-child(4),.grid5>*:nth-child(5){grid-column:span 3}
+@media(max-width:900px){.grid5{grid-template-columns:1fr}.grid5>*{grid-column:auto}}
+.card{border:1px solid var(--line);border-radius:17px;padding:26px;background:var(--bg)}
+.card.lead-card{border-color:transparent;background:linear-gradient(140deg,#F6F1FE,#FEF0F6 58%,#FFF6EC);}
+.card p{margin:0;font-size:15.5px}
+
+.steps{counter-reset:s;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.step{border:1px solid var(--line);border-radius:17px;padding:26px}
+.step .n{counter-increment:s;font-size:13px;font-weight:800;color:var(--p2);letter-spacing:.1em}
+.step .n::before{content:"0" counter(s)}
+
+.metrics{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:17px;overflow:hidden;
+ grid-template-columns:repeat(auto-fit,minmax(158px,1fr));margin-top:34px}
+.metrics>div{background:var(--bg);padding:24px}
+.metrics .k{font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-bottom:7px}
+.metrics .v{font-size:31px;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+
+blockquote{margin:0;border-left:3px solid var(--p3);padding-left:24px;font-size:clamp(19px,2.5vw,25px);
+ line-height:1.42;letter-spacing:-.02em;font-weight:500}
+blockquote cite{display:block;margin-top:15px;font-size:14.5px;font-style:normal;color:var(--mute);font-weight:600}
+
+.faq{border-top:1px solid var(--line)}
+.faq div{border-bottom:1px solid var(--line);padding:24px 0}
+.faq h3{margin:0 0 7px}
+.faq p{margin:0}
+
+.band{border-radius:24px;padding:58px 34px;text-align:center;
+ background:linear-gradient(135deg,#F4EEFE,#FDEDF4 54%,#FFF4E8)}
+.band h2{margin-bottom:12px}
+.band .sub{margin:0 auto 26px}
+
+footer{border-top:1px solid var(--line);padding:46px 0 62px;color:var(--mute);font-size:14.5px}
+footer .row{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start}
+footer p{color:var(--mute);max-width:52ch;font-size:14.5px}
+footer a{color:var(--body);text-decoration:none}
+</style></head><body>
+<div class="wrap"><nav>
+<a class="brand" href="index.html"><span class="mark"><i></i></span>Pagestack</a>
+<span class="links"><a href="index.html">Features</a><a href="product.html">Product</a><a href="work.html" style=color:var(--ink);font-weight:700>Work</a><a href="pricing.html">Pricing</a></span></nav></div>
+<div class="wrap"><section><p class="eyebrow">Work</p><h2>What it looks like after a few months</h2><p class="sub">The pattern is usually the same. Speed first, because it is the quickest win. Then content, month after month, until search starts doing the work.</p><blockquote>Chris and his team at Pagestack have significantly improved our profile and decreased our monthly marketing budget. Couldn't recommend them more.<cite>Ciaran Dalton, Founder, Dalton Physiotherapy</cite></blockquote><div class="metrics"><div><div class="k">Typical lift</div><div class="v grad">Mo 3</div></div><div><div class="k">Steady channel</div><div class="v grad">Mo 6</div></div><div><div class="k">PageSpeed floor</div><div class="v grad">90+</div></div></div></section><section><h2>Why teams come to us</h2><div class="grid"><div class="card"><h3>WordPress. Wix. Squarespace.</h3><p>Clunky to use, painful on mobile, and every small change ends up being a developer ticket.</p></div><div class="card"><h3>Slow sites kill sales and SEO</h3><p>Every second of load time costs you customers and Google ranks slow pages last.</p></div><div class="card"><h3>No control over your own content</h3><p>Want to fix a typo? Update a price? Add a page? You raise a ticket. You wait. You chase.</p></div><div class="card"><h3>Content that costs the earth</h3><p>Agencies charge $300 to $500 per blog post. So nobody publishes.</p></div></div></section><section><div class="band"><h2>Want the same for your site?</h2><p class="sub">Tell us what you have now. If your current site is genuinely working for you, we will say so honestly.</p><a class="btn p" href="https://pagestackapp.com">Book a 15-min call &rarr;</a></div></section></div>
+<footer><div class="wrap"><div class="row">
+<div><a class="brand" href="index.html" style="margin-bottom:12px"><span class="mark"><i></i></span>Pagestack</a>
+<p>Premium managed websites for all businesses. Fast, completely hands-off, and found everywhere people search: Google, Bing and the new AI search engines.</p></div>
+<div><p><a href="mailto:chris@pagestackapp.com">chris@pagestackapp.com</a><br><a href="https://pagestackapp.com">pagestackapp.com</a></p></div>
+</div><p style="margin-top:26px">&copy; 2026 Pagestack. Managed websites for businesses that would rather be doing something else.</p>
+</div></footer></body></html>
